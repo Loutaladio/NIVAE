@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050507" />
+  <meta name="description" content="NIVAE — Moments Gravés, une lettre vivante pour Daniella." />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/assets/IO_DG_Club.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>NIVAE — Moments Gravés</title>
+</head>
+<body>
+  <div id="intro" class="intro-screen">
+    <div class="intro-orbit orbit-one"></div><div class="intro-orbit orbit-two"></div>
+    <div class="intro-inner">
+      <p class="eyebrow intro-eyebrow">Une lettre pour toi · 12.11</p>
+      <h1><span>Pour</span> Daniella.</h1>
+      <p class="intro-copy">Il y a des personnes qui rendent les jours plus beaux<br />sans même essayer.</p>
+      <button class="primary-button intro-button" id="enterButton">Ouvrir ton cadeau <span>↗</span></button>
+      <p class="intro-signature">Avec toute mon affection,<br /><em>ton amie</em></p>
+    </div>
+    <div class="intro-footer"><span>NIVAE / 001</span><span>Une histoire en 24 fragments</span></div>
+  </div>
+
+  <main id="app" class="app-shell is-hidden">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="NIVAE accueil"><span class="brand-mark">N</span><span>NIVAE</span></a>
+      <nav class="nav-links"><a href="#moments">Moments</a><a href="#capsules">Capsules</a><button class="vault-link" id="vaultButton">Mon Coffre <span id="vaultCount">0</span></button></nav>
+      <button class="menu-button" id="menuButton" aria-label="Ouvrir le menu">☰</button>
+    </header>
+
+    <section id="top" class="hero section-pad">
+      <div class="hero-copy reveal"><p class="eyebrow">Pour MABIALA Gloirdy Daniella</p><h2>Une collection<br /><i>de beaux jours.</i></h2><p class="hero-text">Un espace pensé pour célébrer la personne rare que tu es — une capsule à la fois, un souvenir après l’autre.</p><a href="#capsules" class="text-link">Commencer le voyage <span>↓</span></a></div>
+      <div class="hero-art reveal"><div class="hero-ring"></div><div class="hero-image-frame"><img src="/assets/Photo1-MABIALA Gloirdy Daniella.jpeg" alt="Daniella, portrait en noir et blanc" /></div><div class="hero-caption"><span>01 / 04</span><span>La lumière que tu portes</span></div></div>
+      <div class="hero-meta"><span>12 novembre</span><span>Pour aujourd’hui, et tous les jours d’après</span></div>
+    </section>
+
+    <section id="moments" class="moments section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">01 — Galerie éditoriale</p><h3>Moments <i>Gravés</i></h3></div><p>Quelques fragments d’une histoire qui mérite d’être racontée doucement.</p></div>
+      <div class="gallery-grid">
+        <article class="gallery-card card-tall reveal tilt"><div class="shine"></div><img src="/assets/Photo2-MABIALA Gloirdy Daniella.jpeg" alt="Daniella souriante" /><div class="gallery-label"><span>La joie, sans effort</span><small>Une présence qui change la pièce.</small></div></article>
+        <article class="gallery-note reveal"><span class="note-number">02</span><p>“Certaines amitiés ne font pas de bruit. Elles deviennent simplement l’endroit où l’on respire mieux.”</p><small>— une pensée pour toi</small></article>
+        <article class="gallery-card card-wide reveal tilt"><div class="shine"></div><img src="/assets/Phot4-MABIALA Gloirdy Daniella.jpeg" alt="Daniella dans un moment naturel" /><div class="gallery-label"><span>Le courage tranquille</span><small>Tu avances, même lorsque personne ne regarde.</small></div></article>
+        <article class="gallery-card card-small reveal tilt"><div class="shine"></div><img src="/assets/Photo3-MABIALA Gloirdy Daniella.jpeg" alt="Portrait de Daniella" /><div class="gallery-label"><span>Évidemment toi.</span><small>Singulière. Entière. Inoubliable.</small></div></article>
+      </div>
+    </section>
+
+    <section id="capsules" class="capsules section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">02 — Calendrier intime</p><h3>24 jours pour<br /><i>te rappeler</i></h3></div><div class="countdown-box"><span>Prochaine capsule dans</span><strong id="countdown">23:59:59</strong></div></div>
+      <div class="capsule-intro reveal"><p>La première est ouverte. Les suivantes t’attendent, une par jour — comme une petite raison de sourire au réveil.</p><div class="capsule-tools"><span class="available-indicator" id="availableLabel"><i></i> 01 disponible maintenant</span><button class="reminder-button" id="reminderButton">Me rappeler demain ↗</button></div></div>
+      <div id="capsuleGrid" class="capsule-grid"></div>
+    </section>
+
+    <section class="closing section-pad"><div class="closing-line"></div><p class="eyebrow">Et si tu oublies</p><h3>Relis ceci :<br /><i>tu comptes.</i></h3><p>Pas pour ce que tu accomplis. Pour la façon unique dont tu rends le monde un peu plus doux.</p><button class="outline-button" id="randomCapsule">Ouvrir un souvenir au hasard <span>↗</span></button></section>
+    <footer class="footer"><span>NIVAE — MOMENTS GRAVÉS</span><span>Fait avec soin, pour Daniella.</span><span>12.11 / 2027</span></footer>
+  </main>
+
+  <div id="storyModal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close></div><article class="story-card"><button class="close-button" data-close aria-label="Fermer">×</button><div class="story-top"><span id="storyDay">01 / 24</span><span>Pour toi, aujourd’hui</span></div><div class="story-content"><p class="eyebrow" id="storyEyebrow">Le sourire du jour</p><h2 id="storyTitle">Une petite lumière.</h2><p id="storyText"></p></div><div class="story-actions"><button class="save-button" id="saveButton">♡ <span>Garder dans Mon Coffre</span></button><button class="download-button" id="downloadButton">Télécharger la carte ↓</button></div><div class="story-progress" id="storyProgress"></div></article></div>
+  <div id="vaultModal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close></div><article class="vault-card"><button class="close-button" data-close aria-label="Fermer">×</button><p class="eyebrow">Ton espace personnel</p><h2>Mon <i>Coffre</i></h2><p class="vault-subtitle">Les phrases que tu as choisi de garder près de toi.</p><div id="vaultList" class="vault-list"></div></article></div>
+  <script src="/app.js"></script>
+</body>
+</html>

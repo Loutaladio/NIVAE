@@ -1,4 +1,6 @@
 {
+  "buildCommand": "rm -rf dist && mkdir -p dist/assets && cp index.html styles.css app.js manifest.webmanifest sw.js manus-routes.json dist/ && cp -R assets/* dist/assets/",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "headers": [
     {
